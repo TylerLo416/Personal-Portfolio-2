@@ -3,83 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./resources/img/Mark.png">
+    <link rel="icon" href="./resources/img/Mark.webP">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./introsection.css">
+    <link rel="stylesheet" href="./recentwork.css">
+    <link rel="stylesheet" href="./skills.css">
+    <link rel="stylesheet" href="./projects.css">
+    <script src="./project-card.js"></script>
+    <script src="./script.js"></script>
 </head>
 <body>
     <header>
 
     </header>
     <main>
-        <nav>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/portfolio">Portfolio</a></li>
-              <li><a href="/contact">Contact</a></li>
+          <nav>
+            <img class="mark" src="./resources/img/Mark.webP" alt="logo">
+            <ul class="navbar">
+              <li><a class="button" href="#introsection">About</a></li>
+              <li><a class="button" href="#portfolio">Portfolio</a></li>
+              <li><a class="button" href="./contact.html">Contact</a></li>
+              <li><button type="button" class="button" id="load-local">Load Local</button></li>
+              <li><button type="button" class="button" id="load-remote">Load Remote</button></li>
             </ul>
-            <section>
-                <h2>Software Engineer</h2>
-                <h1>I'm Tyler Lo</h1>
-                <h3>I develop <i>Front-End + Full-Stack Applications</i></h3>
-                <button class="hire-me" onclick="window.location.href='#contact'">Hire Me</button>
-                <button class="copy-email" onclick="copyEmail()">Copy Email</button>
-                <div>
-                    <aside>Available for Job</aside>
-                </div>
-                <img src="./resources/img/Mark.png" alt="logo" width="75" height="75">
-                <picture>
-                    <source srcset="./resources/img/tempImg.png" media="(min-width: 800px)">
-                    <source srcset="./resources/img/Mark.png" media="(max-width: 799px)">
-                    <img src="./resources/img/Mark.png" alt="logo" width="75" height="75">
+          </nav>
+          <hr>
+          <section class="introsection" id="introsection">
+              <h2 class="fadedgray">Software Engineer</h2>
+              <aside class="container">
+                <div class="availability-circle"></div>
+                <p class="text" id="jobavailability">Available for Job</p>
+              </aside>
+              <div class="second_row">
+                <h1 class="name whitetext">I'm Tyler Lo</h1>
+                <h3 class="fadedgray">  I develop Front-End + Full-<br>
+                Stack Applications</h3>
+                <button class="introbutton hireme whitetext" onclick="window.location.href='./contact.html'">Hire Me</button>
+                <button class="introbutton emailbutton fadedgray" onclick="copyEmail()">Copy Email</button>
+              </div>
+              <div id="grayCircle">
+                <picture id="portrait">
+                  <!-- Use media attribute to serve different images for different screen sizes -->
+                  <source srcset="./resources/img/me.webP" media="(min-width: 800px)">
+                  <source srcset="./resources/img/me.jpg" media="(max-width: 799px)">
+                  <!-- Fallback image if the sources do not match -->
+                  <img src="./resources/img/Mark.webP" alt="logo" width="100" height="100">
                 </picture>
-            </section>
-            <section>
-                <h1>Recent Work</h1>
-                <ol>
-                    <li>
-                      <strong>Data Engineer</strong> – CVS <br>
-                      <em>Jun 24 - Aug 24</em>
-                    </li>
-                    <li>
-                      <strong>App Developer</strong> – Center for Energy Research <br>
-                      <em>Mar 24 - Present</em>
-                    </li>
-                    <li>
-                      <strong>ServiceNow Developer</strong> – UCSD ITS <br>
-                      <em>Nov 23 - Present</em>
-                    </li>
-                    <li>
-                      <strong>Unity UI Developer</strong> – Cobey Motions <br>
-                      <em>Aug 23 - Mar 24</em>
-                    </li>
-                    <li>
-                      <strong>FrontEnd Intern</strong> – Jacobs School of Engineering <br>
-                      <em>Apr 22 - Dec 22</em>
-                    </li>
-                  </ol>
-            </section>
-            <section>
-                <pre>
-                    <b> JavaScript </b>
-                    <b> React</b>
-                    <b> Unity</b>
-                    <b> Unity</b>
-                    <b> Unity</b>
-                </pre>
+                
+              </div> 
             </section>
             <hr>
-            <article>
-                <strong>LOR Hand Tracker</strong>
-                <p> Front-End</p>
-                <a href="./Projects/LORHandTracker.html">Learn More</a>
-            </article>
-            <article>
-                <strong>VAWT Wind Turbine</strong>
-                <p> Data</p>
-                <a href="./Projects/labs.html">LAB</a>
-            </article>
-          </nav>
+            <section class="twocolumn">
+              <section class="recentwork">
+                  <h2 class="fadedgray">Recent Work</h2>
+                  <ul>
+                    <li class="date_company_color">
+                      <strong class=" title blue_title">Data Engineer</strong> – CVS <br>
+                      <em>Jun 24 - Aug 24</em>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="date_company_color">
+                      <strong class="title white_title">App Developer</strong> – Center for Energy Research <br>
+                      <em>Mar 24 - Present</em>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="date_company_color">
+                      <strong class="title white_title">ServiceNow Developer</strong> – UCSD ITS <br>
+                      <em>Nov 23 - Jun 24</em>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="date_company_color">
+                      <strong class="title white_title">Unity UI Developer</strong> – Cobey Motions <br>
+                      <em>Aug 23 - Mar 24</em>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="date_company_color">
+                      <strong class="title white_title">FrontEnd Intern</strong> – Jacobs School of Engineering <br>
+                      <em>Apr 22 - Dec 22</em>
+                    </li>
+                  </ul>
+                
+              </section>
+              <section class="skills">
+                      <b class="skill_name"> SQL </b>
+                        <div class="dot_container">
+                          <div class=" dots light_blue_dot"></div>
+                          <div class=" dots light_blue_dot"></div>
+                          <div class=" dots light_blue_dot"></div>
+                          <div class=" dots light_blue_dot"></div>
+                          <div class=" dots blue_dot"></div>
+                        </div>
+                      <b class="skill_name"> GCP </b>
+                      <div class="dot_container">
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                      </div>
+                      <b class="skill_name"> System Design</b>
+                      <div class="dot_container">
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                      </div>
+                      <b class="skill_name"> Figma</b>
+                      <div class="dot_container">
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                      </div>
+                      <b class="skill_name"> Front-End (JS) </b>
+                      <div class="dot_container">
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots light_blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                        <div class=" dots blue_dot"></div>
+                      </div>
+              </section>
+            </section>
+            <hr>
+            <section class="twocolumn" id="portfolio">
+              <!-- `script.js` will populate this section -->
+            </section>
     </main>
     <footer>
 
